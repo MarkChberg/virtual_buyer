@@ -22,5 +22,5 @@ urlpatterns =  [
     url(r'^pay/', include('pay.urls')),
     url(r'^order/', include('order.urls')),
     url(r'^search/', include('search.urls')),
-    url(r'^auth/', include('auth.urls'))
+    url(r'^user_auth/', include('user_auth.urls'))
 ]
