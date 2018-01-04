@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from django.urls import include
-urlpatterns =  [
+from man import views as man_view
+urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^man/', include('man.urls')),
     url(r'^pay/', include('pay.urls')),
     url(r'^order/', include('order.urls')),
     url(r'^search/', include('search.urls')),
-    url(r'^user_auth/', include('user_auth.urls'))
+    url(r'^user_auth/', include('user_auth.urls')),
+    url(r'$', man_view.index)
 ]
