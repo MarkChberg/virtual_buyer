@@ -28,7 +28,7 @@ Value: id attr_id(FK) value_name
 
 Attr_link_Value: id attr_id(FK) value_id(FK) sku_id(FK)
 
-Sku: id spu_id(FK) ware_address stocks create_time update_time
+Sku: id spu_id(FK) ware_address stocks price create_time update_time
 
 
 
