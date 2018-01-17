@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{ userform.as_p }}
+    <input type="submit" value="login">
+    <br>
+    <a href="regist.html">regist</a>
+</form>
+</body>
+</html>

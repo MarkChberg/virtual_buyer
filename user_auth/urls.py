@@ -9,4 +9,6 @@ from user_auth import views
 
 urlpatterns = [
     url(r'^user_index/', views.user_index),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^regist/$', views.regist, name='regist'),
 ]
