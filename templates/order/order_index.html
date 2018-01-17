@@ -1,4 +1,52 @@
-{% extends 'base.html' %}
-{% block content %}
-    {{ content }}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        label{
+            width:80px;
+            text-align:right;
+            display:inline-block;
+
+        }
+    </style>
+</head>
+<body style="margin:0">
+    <div style="height:48px;background-color: #dddddd"></div>
+    <div>
+        <table>
+            <p>
+            <td>
+                <tr>商品号    </tr>
+                <tr>商品名    </tr>
+                <tr>单价    </tr>
+                <tr>数量    </tr>
+            </td>
+            </p>
+            {% for row in order_list %}
+                <p>
+                <td>
+                    <tr>{{ row.product_id }}    </tr>
+                    <tr>{{ row.product_name }}    </tr>
+                    <tr>{{ row.price }}    </tr>
+                    <tr>{{ row.quantity }}    </tr>
+                </td>
+                <div>
+                    <form action="/order/order_index/" method="post">
+                        <input type="text" name="quantity" placeholder="数量"/>
+                        <input type="submit" name="确认更改" />
+                    </form>
+                </div>
+                </p>
+            {% endfor %}
+        </table>
+        <div>
+            <form action="/pay/pay_index/" method="post">
+                <input type="submit" name="确认支付" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

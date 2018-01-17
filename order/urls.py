@@ -8,5 +8,5 @@ from order import views
 #  url(r'^xxxx/(?P<id>\d+)',views.xxxx)
 
 urlpatterns = [
-    url(r'^order_index/', views.order_index),
+    url(r'^order_index/', views.order),
 ]
